@@ -1,0 +1,21 @@
+= Geometry War
+
+    a simple game, you just have to destroy squares
+
+image::./geomedryWar3D.png[Sunset]
+== Libraries
+
+*   GLFW
+*   OpenGl/glew
+*   glm
+*   irrKlang ( audio )
+
+== Compile
+
+supported for arch linux
+
+    install packages:
+        $ pacman -S glew glm glfw-x11 
+    Compile with Makefile
+        $ cd ./build/
+        $ make 
