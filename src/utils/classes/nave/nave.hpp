@@ -1,9 +1,8 @@
 #pragma once
 
-#include "../Draw/triangle/triangle.hpp"
+#include "../sysBullets/sysBullet.hpp"
 #include "../../../event/events.hpp"
 #include "../collision.hpp"
-#include "../sysBullets/sysBullet.hpp"
 #include "../song/song.hpp"
 #include "../Draw/nave/nave.hpp"
 
