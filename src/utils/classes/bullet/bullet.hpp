@@ -23,3 +23,7 @@ class Bullet:public Iobjet_colicion{
         bool getRun() override;
         void setCamera(Camera *camera);
 };
+class casa{
+    public:
+        void hello();
+};
