@@ -1,15 +1,16 @@
 #version 330 core
 out vec4 FragColor;
 
-in vec3 Colors;
-in vec3 Normal;  
-in vec3 FragPos;  
-
 uniform vec3 lightPos; 
 uniform vec3 viewPos; 
 uniform vec3 lightColor;
 uniform vec3 objectColor;
-void main(){
+
+in vec3 Normal;  
+in vec3 FragPos;  
+in vec3 Color;
+void main()
+{    
     //FragColor = texture(skybox, TexCoords);
     // ambient
     float ambientStrength = 0.1;
@@ -28,6 +29,6 @@ void main(){
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
     vec3 specular = specularStrength * spec * lightColor;  
         
-    vec3 result = (ambient + diffuse + specular) * Colors;
+    vec3 result = (ambient + diffuse + specular) * Color;
     FragColor = vec4(result, 1.0);
 }
