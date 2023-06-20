@@ -5,6 +5,7 @@
 #include "../../utils/classes/square/cube.hpp"
 #include "../../utils/classes/sysSquares/sysSquares.hpp"
 #include "../../utils/classes/collision.hpp"
+#include "../../utils/classes/Draw/skybox/skybox.hpp"
 
 class BeginGame:public Stage{
     private:
@@ -17,6 +18,7 @@ class BeginGame:public Stage{
         Camera *camera;
         Nave nave;
         CollisionsHandler handlerCollision;
+        DrawSkyBox skyBox;
     public:
         void Init()   override;
         void Update() override;

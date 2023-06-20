@@ -15,6 +15,9 @@ void BeginGame::Init(){
     nave.setCollisionHandler(&this->handlerCollision);
     nave.Init();
     handlerCollision.add(&nave);
+
+    this->skyBox.setCamera(this->camera);
+    this->skyBox.Init();
 };
 void BeginGame::Update(){
     this->handlerCollision.resertState();
@@ -29,6 +32,7 @@ void BeginGame::Render(){
     glClearColor(0.1f, 0.0f, 0.0f,1.0f);
     this->nave.Render();
     this->cubes.Render();
+    this->skyBox.Render();
 };
 
 void BeginGame::setDeltaTime(double *deltaTime){
