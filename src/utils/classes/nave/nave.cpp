@@ -3,21 +3,21 @@
 void Nave::Init(){
     float vertex[] = {
                                                
-         0.0f,  0.3f,  0.2f,    0.0f, 0.5f, 0.5f,  0.0f,  0.3f,  0.2f, 
-        -0.5f,  0.0f,  0.5f,    0.5f, 0.0f, 0.5f, -0.5f,  0.0f,  0.5f, 
-         0.5f,  0.0f,  0.5f,    0.5f, 0.5f, 0.0f,  0.5f,  0.0f,  0.5f, 
-                                                
-         0.0f,  0.3f,  0.2f,    1.1f, 0.5f, 0.5f,  0.0f,  0.3f,  0.2f, 
-        -0.5f,  0.0f,  0.5f,    0.5f, 0.0f, 0.5f, -0.5f,  0.0f,  0.5f, 
-         0.0f,  0.0f, -1.5f,    1.0f, 0.5f, 1.0f,  0.0f,  0.0f, -1.5f, 
-                                                  
-         0.0f,  0.3f,  0.2f,    0.5f, 0.0f, 0.5f,  0.0f,  0.3f,  0.2f, 
-         0.5f,  0.0f,  0.5f,    0.0f, 0.5f, 0.5f,  0.5f,  0.0f,  0.5f, 
-         0.0f,  0.0f, -1.5f,    0.5f, 0.0f, 0.5f,  0.0f,  0.0f, -1.5f, 
-                                                   
-        -0.5f,  0.0f,  0.5f,    1.5f, 0.0f, 0.5f, -0.5f,  0.0f,  0.5f,
-         0.0f,  0.0f, -1.5f,    1.0f, 0.5f, 0.5f,  0.0f,  0.0f, -1.5f,
-         0.5f,  0.0f,  0.5f,    1.5f, 1.0f, 0.5f,  0.5f,  0.0f,  0.5f,
+         0.0f,  0.3f,  0.2f,    0.0f, 0.5f, 0.3f,  0.0f,  0.3f,  0.2f, 
+        -0.5f,  0.0f,  0.5f,    0.0f, 0.1f, 0.3f, -0.5f,  0.0f,  0.5f, 
+         0.5f,  0.0f,  0.5f,    0.0f, 0.1f, 0.3f,  0.5f,  0.0f,  0.5f,
+
+         0.0f,  0.3f,  0.2f,    0.0f, 0.5f, 0.3f,  0.0f,  0.3f,  0.2f, 
+        -0.5f,  0.0f,  0.5f,    0.0f, 0.1f, 0.3f, -0.5f,  0.0f,  0.5f, 
+         0.0f,  0.0f, -1.5f,    1.0f, 0.0f, 0.0f,  0.0f,  0.0f, -1.5f,
+
+         0.0f,  0.3f,  0.2f,    0.0f, 0.5f, 0.3f,  0.0f,  0.3f,  0.2f, 
+         0.5f,  0.0f,  0.5f,    0.0f, 0.1f, 0.3f,  0.5f,  0.0f,  0.5f, 
+         0.0f,  0.0f, -1.5f,    1.0f, 0.0f, 0.0f,  0.0f,  0.0f, -1.5f,
+
+        -0.5f,  0.0f,  0.5f,    0.0f, 0.0f, 0.0f, -0.5f,  0.0f,  0.5f,
+         0.0f,  0.0f, -1.5f,    0.0f, 0.0f, 0.0f,  0.0f,  0.0f, -1.5f,
+         0.5f,  0.0f,  0.5f,    0.0f, 0.0f, 0.0f,  0.5f,  0.0f,  0.5f,
     };
     this->song= new Song("./songs/bullet.wav",false);
     this->movement= Movement::none;
@@ -142,11 +142,11 @@ void Nave::view(){
     glm::mat4 model = this->nave.model;
     
     glm::mat4 front = glm::mat4(model);
-              front = glm::translate(front, glm::vec3(0.0,1.5,-2.0));
+              front = glm::translate(front, glm::vec3(0.0,2.0,-1.0));
     glm::vec3 cameraFront = glm::vec3(front[3][0],front[3][1],front[3][2]);
     
     glm::mat4 position  = glm::mat4(model);
-              position  = glm::translate(position, glm::vec3( 0.0 , 3.0 , 5.0));
+              position  = glm::translate(position, glm::vec3( 0.0 , 3.0 , 8.0));
     glm::vec3 cameraPos = glm::vec3(position[3][0] , position[3][1] , position[3][2]);
     
 
