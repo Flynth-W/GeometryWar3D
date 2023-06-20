@@ -3,21 +3,21 @@
 void Nave::Init(){
     float vertex[] = {
                                                
-         0.0f,  0.3f,  0.2f,    0.0f, 0.5f, 0.5f, 
-        -0.5f,  0.0f,  0.5f,    0.5f, 0.0f, 0.5f, 
-         0.5f,  0.0f,  0.5f,    0.5f, 0.5f, 0.0f, 
+         0.0f,  0.3f,  0.2f,    0.0f, 0.5f, 0.5f,  0.0f,  0.3f,  0.2f, 
+        -0.5f,  0.0f,  0.5f,    0.5f, 0.0f, 0.5f, -0.5f,  0.0f,  0.5f, 
+         0.5f,  0.0f,  0.5f,    0.5f, 0.5f, 0.0f,  0.5f,  0.0f,  0.5f, 
                                                 
-         0.0f,  0.3f,  0.2f,    1.1f, 0.5f, 0.5f, 
-        -0.5f,  0.0f,  0.5f,    0.5f, 0.0f, 0.5f, 
-         0.0f,  0.0f, -1.5f,    1.0f, 0.5f, 1.0f, 
-        
-         0.0f,  0.3f,  0.2f,    0.5f, 0.0f, 0.5f, 
-         0.5f,  0.0f,  0.5f,    0.0f, 0.5f, 0.5f, 
-         0.0f,  0.0f, -1.5f,    0.5f, 0.0f, 0.5f, 
-         
-        -0.5f,  0.0f,  0.5f,    1.5f, 0.0f, 0.5f, 
-         0.0f,  0.0f, -1.5f,    1.0f, 0.5f, 0.5f, 
-         0.5f,  0.0f,  0.5f,    1.5f, 1.0f, 0.5f, 
+         0.0f,  0.3f,  0.2f,    1.1f, 0.5f, 0.5f,  0.0f,  0.3f,  0.2f, 
+        -0.5f,  0.0f,  0.5f,    0.5f, 0.0f, 0.5f, -0.5f,  0.0f,  0.5f, 
+         0.0f,  0.0f, -1.5f,    1.0f, 0.5f, 1.0f,  0.0f,  0.0f, -1.5f, 
+                                                  
+         0.0f,  0.3f,  0.2f,    0.5f, 0.0f, 0.5f,  0.0f,  0.3f,  0.2f, 
+         0.5f,  0.0f,  0.5f,    0.0f, 0.5f, 0.5f,  0.5f,  0.0f,  0.5f, 
+         0.0f,  0.0f, -1.5f,    0.5f, 0.0f, 0.5f,  0.0f,  0.0f, -1.5f, 
+                                                   
+        -0.5f,  0.0f,  0.5f,    1.5f, 0.0f, 0.5f, -0.5f,  0.0f,  0.5f,
+         0.0f,  0.0f, -1.5f,    1.0f, 0.5f, 0.5f,  0.0f,  0.0f, -1.5f,
+         0.5f,  0.0f,  0.5f,    1.5f, 1.0f, 0.5f,  0.5f,  0.0f,  0.5f,
     };
     this->song= new Song("./songs/bullet.wav",false);
     this->movement= Movement::none;
@@ -161,6 +161,7 @@ void Nave::view(){
         cameraUp.y=1;
     }
     *camera->view = glm::lookAt(cameraPos,  cameraFront, cameraUp);
+    this->camera->cameraPos=cameraPos;
 }
 void Nave::Render(){
     this->view();
