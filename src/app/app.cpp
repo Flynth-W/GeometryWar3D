@@ -3,6 +3,7 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
+
 }
 App::App(){
     this->height=1000;
@@ -26,7 +27,8 @@ void App::Init(){
 
     glewInit();
     glEnable(GL_DEPTH_TEST);
-    
+    glEnable(GL_BLEND);    
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     orchestrator.setMouse(mouse);
     orchestrator.setKeys(keys);
     orchestrator.setMouseKeys(mouseKeys);

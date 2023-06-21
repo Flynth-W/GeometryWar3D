@@ -26,6 +26,7 @@ class App{
         void Events();
         void Update();
         void Render();
+        
         void setKeys(std::unordered_map<int,ButtonKey> *_keys);
         void setMouse(Mouse *_mouse);
         void setMouseKeys(std::unordered_map<int,ButtonKey> *_mousekeys);

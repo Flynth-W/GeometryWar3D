@@ -6,6 +6,7 @@
 #include "../../utils/classes/sysSquares/sysSquares.hpp"
 #include "../../utils/classes/collision.hpp"
 #include "../../utils/classes/Draw/skybox/skybox.hpp"
+#include "../../utils/classes/button/button.hpp"
 
 class BeginGame:public Stage{
     private:
@@ -19,6 +20,7 @@ class BeginGame:public Stage{
         Nave nave;
         CollisionsHandler handlerCollision;
         DrawSkyBox skyBox;
+        DrawButton *button;
     public:
         void Init()   override;
         void Update() override;

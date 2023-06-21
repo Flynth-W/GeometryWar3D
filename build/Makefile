@@ -16,7 +16,8 @@ OBJS = ../src/main.o \
 	   ../src/utils/classes/Draw/cube/cube.o \
 	   ../src/utils/classes/camera/camera.o  \
 	   ../src/utils/classes/Draw/nave/nave.o \
-	   ../src/utils/classes/Draw/skybox/skybox.o 
+	   ../src/utils/classes/Draw/skybox/skybox.o \
+	   ../src/utils/classes/button/button.o
 
 FILE_BIN = Asteroid.bin
 LIBS = -lGL -lglfw -lGLEW 

@@ -18,6 +18,10 @@ void BeginGame::Init(){
 
     this->skyBox.setCamera(this->camera);
     this->skyBox.Init();
+    
+    this->button = new DrawButton();
+    this->button->setCamera(this->camera);
+    this->button->setPosition(glm::vec3(0.0,0.0,0.0));
 };
 void BeginGame::Update(){
     this->handlerCollision.resertState();
@@ -25,6 +29,7 @@ void BeginGame::Update(){
 
     this->nave.Update();
     this->cubes.Update();
+    this->button->Update();
 };
 void BeginGame::Render(){
 
@@ -33,6 +38,7 @@ void BeginGame::Render(){
     this->nave.Render();
     this->cubes.Render();
     this->skyBox.Render();
+    this->button->Render();
 };
 
 void BeginGame::setDeltaTime(double *deltaTime){
